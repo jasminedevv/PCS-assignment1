@@ -1,0 +1,41 @@
+body {
+  background: black;
+  color: #ccccff;
+  font-family: Helvetica Neue;
+}
+
+span {
+  color: red;
+}
+
+article {
+  margin: 2rem auto;
+  border: solid white 1px;
+  padding: 0.5rem 1rem;
+  width: 30rem;
+}
+
+#red {
+  color: red;
+}
+
+#green {
+ color: green;
+}
+
+#blue {
+ color: blue;
+}
+
+header {
+  margin: 0;
+  padding: 5em;
+  background-color: #ff99cc;
+}
+
+footer {
+  font-size: 9px;
+  text-align: right;
+  padding: right: 5px;
+  background-color: #222;
+}
