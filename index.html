@@ -2,11 +2,12 @@
 
 <head>
   <title>Something Witty</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link href="css/main.css" rel="stylesheet" type="text/css">
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
-  <!---<script src="/parallax.js"></script>---->
 
 </head>
 
@@ -31,7 +32,8 @@
       <div class="box">
         <h2>My Goals</h2>
         <p>Being self taught in anything is bound to result in small random gaps in knowledge. My goal for this class is to fill in those gaps. I also need to learn some best practices because it's never easy to know if you're doing something badly if it
-          works.</p>
+          works.
+        </p>
         <p>
           I also lack the soft skills required to be a good developper. I'm taking this class to get experience working with other people, get the hang of git in a teamwork setting, and learn to communicate better.
         </p>
@@ -78,21 +80,6 @@
       </div>
     </article>
 
-    <div class="grid-item box-holder col-sm-6 col-md-4 col-xs-12">
-      <div class="box">
-        <img src="http://www.lovethispic.com/uploaded_images/35115-Halloween-Night-Bokeh.jpg" />
-        <h4>Title</h4>
-        <p>Caption this hell yea bleh</p>
-      </div>
-    </div>
-    <div class="grid-item box-holder col-sm-6 col-md-4 col-xs-12">
-      <div class="box">
-        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRAH1fgv-c27v48VlA5Z8XubLQ3hksiV-TKOscmF1Ew2H1mrT84Kg" />
-        <h4>Title</h4>
-        <p>Caption this hell yea bleh</p>
-      </div>
-    </div>
-
   </div>
   <footer>
     <p>Built for Portland Code School by Jasmine Humbert</p>
@@ -101,19 +88,16 @@
 </body>
 
 <script>
+  function parallax() {
+    var scrolled = $(window).scrollTop();
+    $('.bg').css('top', -(scrolled * 0.5) + 'px');
+  }
 
-function parallax() {
-  var scrolled = $(window).scrollTop();
-  $('.bg').css('top', -(scrolled * 0.5) + 'px');
-}
-
-$(document).ready(function() {
-  $(window).scroll(function() {
-    parallax();
-    console.log("Parallax read.")
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      parallax()
+    });
   });
-});
-
 </script>
 
 </html>
